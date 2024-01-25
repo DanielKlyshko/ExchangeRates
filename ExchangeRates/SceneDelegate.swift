@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  ExchangeRates
-//
-//  Created by Daniel Klyshko on 16.01.24.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
