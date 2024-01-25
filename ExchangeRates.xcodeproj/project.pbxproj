@@ -12,6 +12,7 @@
 		1CF4901A2B56FC04004EE47D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF490192B56FC04004EE47D /* ViewController.swift */; };
 		1CF4901F2B56FC05004EE47D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CF4901E2B56FC05004EE47D /* Assets.xcassets */; };
 		1CF490222B56FC05004EE47D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CF490202B56FC05004EE47D /* LaunchScreen.storyboard */; };
+		1CF490742B62E405004EE47D /* TableOfRatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF490732B62E404004EE47D /* TableOfRatesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1CF4901E2B56FC05004EE47D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CF490212B56FC05004EE47D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CF490232B56FC05004EE47D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CF490732B62E404004EE47D /* TableOfRatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfRatesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				1CF490152B56FC04004EE47D /* AppDelegate.swift */,
 				1CF490172B56FC04004EE47D /* SceneDelegate.swift */,
 				1CF490192B56FC04004EE47D /* ViewController.swift */,
+				1CF490732B62E404004EE47D /* TableOfRatesTableViewCell.swift */,
 				1CF4901E2B56FC05004EE47D /* Assets.xcassets */,
 				1CF490202B56FC05004EE47D /* LaunchScreen.storyboard */,
 				1CF490232B56FC05004EE47D /* Info.plist */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CF4901A2B56FC04004EE47D /* ViewController.swift in Sources */,
+				1CF490742B62E405004EE47D /* TableOfRatesTableViewCell.swift in Sources */,
 				1CF490162B56FC04004EE47D /* AppDelegate.swift in Sources */,
 				1CF490182B56FC04004EE47D /* SceneDelegate.swift in Sources */,
 			);
