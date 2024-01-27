@@ -25,21 +25,47 @@ final class TableOfRatesTableViewCell: UITableViewCell {
     
     // MARK: - Constrains config
     private func configConstraints() {
+        
+        // backgroundOfCellUIView
         backgroundOfCellUIView.translatesAutoresizingMaskIntoConstraints = false
         backgroundOfCellUIView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20).isActive = true
         backgroundOfCellUIView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
         backgroundOfCellUIView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
         backgroundOfCellUIView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         backgroundOfCellUIView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        // nameOfCurrencyUILabel
+        nameOfCurrencyUILabel.translatesAutoresizingMaskIntoConstraints = false
+        nameOfCurrencyUILabel.leadingAnchor.constraint(equalTo: backgroundOfCellUIView.leadingAnchor, constant: 20).isActive = true
+        nameOfCurrencyUILabel.centerYAnchor.constraint(equalTo: backgroundOfCellUIView.centerYAnchor).isActive = true
+        
+        //
+        valueOfCurrencyUILabel.translatesAutoresizingMaskIntoConstraints = false
+        valueOfCurrencyUILabel.trailingAnchor.constraint(equalTo: backgroundOfCellUIView.trailingAnchor, constant: -20).isActive = true
+        valueOfCurrencyUILabel.centerYAnchor.constraint(equalTo: backgroundOfCellUIView.centerYAnchor).isActive = true
     }
     
     
     // MARK: - UI config
     private func uiConfig() {
+        
+        // backgroundOfCellUIView
         backgroundOfCellUIView.layer.cornerRadius = 10
         backgroundOfCellUIView.backgroundColor = UIColor(red: 37/255, green: 35/255, blue: 51/255, alpha: 1.0)
+        
+        //
+        nameOfCurrencyUILabel.textColor = .white
+        nameOfCurrencyUILabel.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        
+        //
+        valueOfCurrencyUILabel.textColor = .lightGray
+        valueOfCurrencyUILabel.font = UIFont.systemFont(ofSize: 14)
     }
     
+    func coinConfig(with coin: Coins) {
+        nameOfCurrencyUILabel.text = coin.exchange_id
+        valueOfCurrencyUILabel.text = ("$\(coin.volume_1hrs_usd)")
+    }
     
     // MARK: - Helper
     required init?(coder: NSCoder) {

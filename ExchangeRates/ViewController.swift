@@ -6,6 +6,7 @@ class ViewController: UIViewController {
     // MARK: - Properties
     private let nameOfTableUILabel = UILabel()
     private let tableOfRatesUITableView = UITableView()
+    var coinsArray: [Coins] = []
     
     
     // MARK: - Lifecycle
@@ -17,6 +18,11 @@ class ViewController: UIViewController {
         tableOfRatesUITableView.dataSource = self
         tableOfRatesUITableView.delegate = self
         tableOfRatesUITableView.register(TableOfRatesTableViewCell.self, forCellReuseIdentifier: "TableOfRatesTableViewCell")
+        
+        NetworkManager.instance.getCoinsInfo { coins in
+            self.coinsArray = coins
+            self.tableOfRatesUITableView.reloadData()
+        }
         
         view.addSubview(nameOfTableUILabel)
         view.addSubview(tableOfRatesUITableView)
@@ -60,11 +66,13 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return coinsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableOfRatesTableViewCell", for: indexPath) as? TableOfRatesTableViewCell else {return UITableViewCell()}
+        let coin = coinsArray[indexPath.row]
+        cell.coinConfig(with: coin)
         return cell
     }
 }
