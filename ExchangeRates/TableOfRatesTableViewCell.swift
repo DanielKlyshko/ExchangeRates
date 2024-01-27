@@ -53,11 +53,11 @@ final class TableOfRatesTableViewCell: UITableViewCell {
         backgroundOfCellUIView.layer.cornerRadius = 10
         backgroundOfCellUIView.backgroundColor = UIColor(red: 37/255, green: 35/255, blue: 51/255, alpha: 1.0)
         
-        //
+        // nameOfCurrencyUILabel
         nameOfCurrencyUILabel.textColor = .white
         nameOfCurrencyUILabel.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         
-        //
+        // valueOfCurrencyUILabel
         valueOfCurrencyUILabel.textColor = .lightGray
         valueOfCurrencyUILabel.font = UIFont.systemFont(ofSize: 14)
     }
