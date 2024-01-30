@@ -72,6 +72,7 @@ class ViewController: UIViewController {
         
         // tableOfRatesUITableView
         tableOfRatesUITableView.backgroundColor = UIColor(red: 20/255, green: 18/255, blue: 29/255, alpha: 1.0)
+        tableOfRatesUITableView.separatorStyle = .none
     }
 
 }
